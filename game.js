@@ -30,7 +30,7 @@ msg.style.backgroundColor= "green";
    // console.log("Computer Win!");
 compScore++;
 compScorePara.innerText=compScore;
-    msg.innerText=`Computer Win! ${userChoice} beats  your ${compChoice}`;
+    msg.innerText=`Computer Win! ${compChoice} beats  your ${userChoice}`;
 msg.style.backgroundColor= "red";
 }
 }
@@ -51,7 +51,7 @@ const playGame = (userChoice)=>{
         userWin = compChoice==="paper" ? false: true;
         }else if(userChoice=== "paper"){
         userWin= compChoice==="scissors"? false:true;
-        }else{
+        }else if (userChoice==="scissors"){
         userWin= compChoice==="rock"? false:true;
         }
         showWinner(userWin, userChoice, compChoice);
